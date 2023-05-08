@@ -25,7 +25,8 @@ import java.util.ArrayList;
  *
  * @author hanin
  */
-public class AffichageItineraire extends Form{
+public class AffichageItineraire extends Form {
+
     //     public ListReservations(Form previous) {
 //        setTitle("List Reservations");
 //        setLayout(BoxLayout.y());
@@ -39,20 +40,19 @@ public class AffichageItineraire extends Form{
 //
 //    }
     public AffichageItineraire(Form previous) {
-    setTitle("List Itineraires");
-    setLayout(BoxLayout.y());
-    ArrayList<Iteneraire> itineraires= ServiceItineraire.getInstance().getAllIteneraires();
-        
-    for (Iteneraire itineraire : itineraires) {
-        Container card = new Container(new BorderLayout());
-        card.getStyle().setBorder(Border.createLineBorder(1, ColorUtil.GRAY));
-        card.getStyle().setMarginUnit(Style.UNIT_TYPE_DIPS);
-        card.getStyle().setMargin(Component.BOTTOM, 10);
-        card.getStyle().setBgColor(0xFFFFFF);
-        
-        
-        Label DepartLabel = new Label("Pts du depart:"+itineraire.getPts_depart());
-        Label ArriveLabel = new Label("Pts du arrive:"+itineraire.getPts_arrive());
+        setTitle("List Itineraires");
+        setLayout(BoxLayout.y());
+        ArrayList<Iteneraire> itineraires = ServiceItineraire.getInstance().getAllIteneraires();
+
+        for (Iteneraire itineraire : itineraires) {
+            Container card = new Container(new BorderLayout());
+            card.getStyle().setBorder(Border.createLineBorder(1, ColorUtil.GRAY));
+            card.getStyle().setMarginUnit(Style.UNIT_TYPE_DIPS);
+            card.getStyle().setMargin(Component.BOTTOM, 10);
+            card.getStyle().setBgColor(0xFFFFFF);
+
+            Label DepartLabel = new Label("Pts du depart:" + itineraire.getPts_depart());
+            Label ArriveLabel = new Label("Pts du arrive:" + itineraire.getPts_arrive());
 
 //        Label clientLabel = new Label("Client: " + reservation.getId_client());
 //        Label dateLabel = new Label("Date: " + reservation.getDate_reservation());
@@ -62,9 +62,8 @@ public class AffichageItineraire extends Form{
 //        Label moyenTransportLabel = new Label("Moyen de transport: " + reservation.getId_moy());
 //        Label itLabel = new Label("Itineraire: " + reservation.getId_it());
 //        Label statusLabel = new Label("Status: " + reservation.getStatus());
-
-        DepartLabel.getStyle().setFgColor(0x000000);
-        ArriveLabel.getStyle().setFgColor(0x000000);
+            DepartLabel.getStyle().setFgColor(0x000000);
+            ArriveLabel.getStyle().setFgColor(0x000000);
 //        heureDepartLabel.getStyle().setFgColor(0x000000);
 //        heureArriveLabel.getStyle().setFgColor(0x000000);
 //        typeTicketLabel.getStyle().setFgColor(0x000000);
@@ -72,59 +71,56 @@ public class AffichageItineraire extends Form{
 //        itLabel.getStyle().setFgColor(0x000000);
 //        statusLabel.getStyle().setFgColor(0x000000);
 
-        
-        card.add(BorderLayout.CENTER, BoxLayout.encloseY(DepartLabel, ArriveLabel
-                ));
-        this.add(card);
-        
-        
-                           Button btndelete = new Button("delete");
+            card.add(BorderLayout.CENTER, BoxLayout.encloseY(DepartLabel, ArriveLabel
+            ));
+            this.add(card);
 
+            Button btndelete = new Button("delete");
 
-add(btndelete);
+            add(btndelete);
 
-Button updateButton = new Button("Update Itineraire");
-updateButton.addActionListener(e -> {
-    Form updateForm = new Form("Update Itineraire");
-    
-    TextField ptsd = new TextField("", "ptsDepart");
-    TextField ptsa = new TextField("", "ptsArrive");
+            Button updateButton = new Button("Update Itineraire");
+            updateButton.addActionListener(e -> {
+                Form updateForm = new Form("Update Itineraire");
 
-    Button submitButton = new Button("Submit");
-    submitButton.addActionListener(submitEvent -> {
-        // Get the updated values of the fields
-       
-        String ptsd2 = ptsd.getText();
-        String ptsa2 = ptsa.getText();
-        
+                TextField ptsd = new TextField("", "ptsDepart");
+                TextField ptsa = new TextField("", "ptsArrive");
 
-        // Call the service function to update the station
-        Services.ServiceItineraire.getInstance().modifierItineraire(itineraire.getId(),ptsd2, ptsa2);
+                Button submitButton = new Button("Submit");
+                submitButton.addActionListener(submitEvent -> {
+                    // Get the updated values of the fields
 
-        // Show a confirmation message to the user
-        Dialog.show("Success", "Station updated successfully", "OK", null);
-        AffichageItineraire refresh = new AffichageItineraire(previous);
-      refresh.show();
-    });
+                    String ptsd2 = ptsd.getText();
+                    String ptsa2 = ptsa.getText();
 
-    updateForm.add(ptsd).add(ptsa).add(submitButton);
-    updateForm.show();
-});
+                    // Call the service function to update the station
+                    Services.ServiceItineraire.getInstance().modifierItineraire(itineraire.getId(), ptsd2, ptsa2);
 
-add(updateButton);
-btndelete.addActionListener((e) -> {
-     Services.ServiceItineraire.getInstance().suppItenraire(itineraire);
-     AffichageItineraire refresh = new AffichageItineraire(previous);
-     refresh.show();
-});
+                    // Show a confirmation message to the user
+                    Dialog.show("Success", "Iteneraire updated successfully", "OK", null);
+                    AffichageItineraire refresh = new AffichageItineraire(previous);
+                    refresh.show();
+                });
+
+                updateForm.add(ptsd).add(ptsa).add(submitButton);
+                updateForm.show();
+            });
+
+            add(updateButton);
+            btndelete.addActionListener((e) -> {
+                Services.ServiceItineraire.getInstance().suppItenraire(itineraire);
+                AffichageItineraire refresh = new AffichageItineraire(previous);
+                refresh.show();
+            });
+        }
+        Button btnHome = new Button("Home");
+        add(btnHome);
+
+        btnHome.addActionListener((e) -> {
+            ItineraireHome home = new ItineraireHome();
+            home.show();
+
+        });
+
     }
-    Button btnHome = new Button("Home");
-add(btnHome);
-
-btnHome.addActionListener((e) -> {
-    ItineraireHome home = new ItineraireHome ();
-    home.show();
-
-});
-
-}}
+}

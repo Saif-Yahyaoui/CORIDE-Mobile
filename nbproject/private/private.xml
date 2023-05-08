@@ -4,23 +4,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/New%20folder/PIDEV-VORTEX-Codename-One-3A10/src/Entity/Iteneraire.java</file>
-            <file>file:/C:/New%20folder/PIDEV-VORTEX-Codename-One-3A10/src/Gui/Itineraire/NewsfeedForm.java</file>
-            <file>file:/C:/New%20folder/PIDEV-VORTEX-Codename-One-3A10/src/Gui/Reservation/AddReservationForm.java</file>
-            <file>file:/C:/New%20folder/PIDEV-VORTEX-Codename-One-3A10/src/Gui/Itineraire/AjoutItineraireForm.java</file>
-            <file>file:/C:/New%20folder/PIDEV-VORTEX-Codename-One-3A10/src/Gui/Itineraire/WalkthruForm.java</file>
-            <file>file:/C:/New%20folder/PIDEV-VORTEX-Codename-One-3A10/src/Gui/Reservation/ReservationHome.java</file>
-            <file>file:/C:/New%20folder/PIDEV-VORTEX-Codename-One-3A10/src/Gui/User/UserHome.java</file>
-            <file>file:/C:/New%20folder/PIDEV-VORTEX-Codename-One-3A10/src/Gui/Itineraire/SignInForm.java</file>
-            <file>file:/C:/New%20folder/PIDEV-VORTEX-Codename-One-3A10/src/com/mycompany/myapp/MyApplication.java</file>
-            <file>file:/C:/New%20folder/PIDEV-VORTEX-Codename-One-3A10/src/Gui/Itineraire/ItineraireHome.java</file>
-            <file>file:/C:/New%20folder/PIDEV-VORTEX-Codename-One-3A10/src/Gui/Itineraire/SignUpForm.java</file>
-            <file>file:/C:/New%20folder/PIDEV-VORTEX-Codename-One-3A10/src/Gui/Itineraire/ProfileForm.java</file>
-            <file>file:/C:/New%20folder/PIDEV-VORTEX-Codename-One-3A10/src/Services/ServiceItineraire.java</file>
-            <file>file:/C:/New%20folder/PIDEV-VORTEX-Codename-One-3A10/src/Gui/Reservation/ListReservations.java</file>
-            <file>file:/C:/New%20folder/PIDEV-VORTEX-Codename-One-3A10/src/Utils/Statics.java</file>
-            <file>file:/C:/New%20folder/PIDEV-VORTEX-Codename-One-3A10/src/Services/ServiceReclamation.java</file>
-            <file>file:/C:/New%20folder/PIDEV-VORTEX-Codename-One-3A10/src/Gui/Itineraire/BaseForm.java</file>
+            <file>file:/C:/Users/MSI/Downloads/PIDEV-VORTEX-Codename-One-3A10/src/Gui/Trajet/AffichageTrajet.java</file>
+            <file>file:/C:/Users/MSI/Downloads/PIDEV-VORTEX-Codename-One-3A10/src/Gui/Trajet/TrajetHome.java</file>
+            <file>file:/C:/Users/MSI/Downloads/PIDEV-VORTEX-Codename-One-3A10/src/Entity/Trajet.java</file>
+            <file>file:/C:/Users/MSI/Downloads/PIDEV-VORTEX-Codename-One-3A10/src/com/mycompany/myapp/MyApplication.java</file>
+            <file>file:/C:/Users/MSI/Downloads/PIDEV-VORTEX-Codename-One-3A10/src/Services/ServiceTrajet.java</file>
+            <file>file:/C:/Users/MSI/Downloads/PIDEV-VORTEX-Codename-One-3A10/src/Utils/Statics.java</file>
+            <file>file:/C:/Users/MSI/Downloads/PIDEV-VORTEX-Codename-One-3A10/src/Gui/Trajet/AjoutTrajetForm.java</file>
+            <file>file:/C:/Users/MSI/Downloads/PIDEV-VORTEX-Codename-One-3A10/src/Services/ServiceItineraire.java</file>
         </group>
     </open-files>
 </project-private>
