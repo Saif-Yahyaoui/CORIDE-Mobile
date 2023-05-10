@@ -14,22 +14,14 @@ package Entity;
     private int id;
     private String depart;
     private String destination;
-    private TypeTrajet typeTrajet;
-
-    public Trajet(int id, String depart, String destination, TypeTrajet typeTrajet) {
-        this.id = id;
-        this.depart = depart;
-        this.destination = destination;
-        this.typeTrajet = typeTrajet;
-    }
-
-    public Trajet(String depart, String destination) {
-        this.depart = depart;
-        this.destination = destination;
-    }
 
     public Trajet(int id, String depart, String destination) {
         this.id = id;
+        this.depart = depart;
+        this.destination = destination;
+    }
+
+    public Trajet(String depart, String destination) {
         this.depart = depart;
         this.destination = destination;
     }
@@ -64,16 +56,8 @@ package Entity;
         this.destination = destination;
     }
 
-    public TypeTrajet getTypeTrajet() {
-        return typeTrajet;
-    }
-
-    public void setTypeTrajet(TypeTrajet typeTrajet) {
-        this.typeTrajet = typeTrajet;
-    }
-
     @Override
     public String toString() {
-        return "Trajet{" + "id=" + id + ", depart=" + depart + ", destination=" + destination + ", typeTrajet=" + typeTrajet + '}';
+        return "Trajet{" + "id=" + id + ", depart=" + depart + ", destination=" + destination + '}';
     }
 }

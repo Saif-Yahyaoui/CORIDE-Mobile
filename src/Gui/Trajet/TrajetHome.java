@@ -5,6 +5,7 @@
  */
 package Gui.Trajet;
 
+import Home.Home;
 import com.codename1.ui.Button;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
@@ -20,12 +21,24 @@ public class TrajetHome extends Form  {
         add(new Label("Choose an option trajet"));
         Button btnAddTrajet = new Button("Add Trajet");
         Button btnListTrajets = new Button("Show Trajets");
+        Button btnBack = new Button("Back");
+
         Resources res = null;
         btnAddTrajet.addActionListener(e-> new AjoutTrajetForm(res).show());
-        //btnListTasks.addActionListener(e-> new ListTasksForm(this).show());
         btnListTrajets.addActionListener(e-> new AffichageTrajet(this).show());
+        btnBack.addActionListener(e->
+                {
+            Home home = new Home();
+            home.show();
+        }
+                    
+        );
+
         add(btnAddTrajet);
         add(btnListTrajets);
+                add(btnBack);
+
+      
 
 
     }
